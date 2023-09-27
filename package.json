@@ -16,7 +16,7 @@
     "popper.js": "^1.16.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5",
     "rescript": "^10.1.4",
     "typescript": "^3.9.10"
   },
