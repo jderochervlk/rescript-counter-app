@@ -1,51 +1,49 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Counter extends Component {
-  render() {
-    return (
-      <div>
-        <div className="row">
-          <div className="">
-            <span style={{ fontSize: 24 }} className={this.getBadgeClasses()}>
-              {this.formatCount()}
-            </span>
-          </div>
-          <div className="">
-            <button
-              className="btn btn-secondary"
-              onClick={() => this.props.onIncrement(this.props.counter)}
-            >
-              <i className="fa fa-plus-circle" aria-hidden="true" />
-            </button>
-            <button
-              className="btn btn-info m-2"
-              onClick={() => this.props.onDecrement(this.props.counter)}
-              disabled={this.props.counter.value === 0 ? "disabled" : ""}
-            >
-              <i className="fa fa-minus-circle" aria-hidden="true" />
-            </button>
-            <button
-              className="btn btn-danger"
-              onClick={() => this.props.onDelete(this.props.counter.id)}
-            >
-              <i className="fa fa-trash-o" aria-hidden="true" />
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  getBadgeClasses = () => {
+function Counter({ counter, onIncrement, onDecrement, onDelete }) {
+  let getBadgeClasses = () => {
     let classes = "badge m-2 badge-";
-    classes += this.props.counter.value === 0 ? "warning" : "primary";
+    classes += counter.value === 0 ? "warning" : "primary";
     return classes;
   };
-
-  formatCount = () => {
-    const { value } = this.props.counter;
+  
+  let formatCount = () => {
+    const { value } = counter;
     return value === 0 ? "Zero" : value;
   };
+
+  return (
+    <div>
+      <div className="row">
+        <div className="">
+          <span style={{ fontSize: 24 }} className={getBadgeClasses()}>
+            {formatCount()}
+          </span>
+        </div>
+        <div className="">
+          <button
+            className="btn btn-secondary"
+            onClick={() => onIncrement(counter)}
+          >
+            <i className="fa fa-plus-circle" aria-hidden="true" />
+          </button>
+          <button
+            className="btn btn-info m-2"
+            onClick={() => onDecrement(counter)}
+            disabled={counter.value === 0 ? "disabled" : ""}
+          >
+            <i className="fa fa-minus-circle" aria-hidden="true" />
+          </button>
+          <button
+            className="btn btn-danger"
+            onClick={() => onDelete(counter.id)}
+          >
+            <i className="fa fa-trash-o" aria-hidden="true" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Counter;
