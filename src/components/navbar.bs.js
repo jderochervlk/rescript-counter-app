@@ -2,7 +2,7 @@
 
 import * as JsxRuntime from "react/jsx-runtime";
 
-function Navbar$main(props) {
+function Navbar(props) {
   return JsxRuntime.jsx("nav", {
               children: JsxRuntime.jsxs("div", {
                     children: [
@@ -15,7 +15,7 @@ function Navbar$main(props) {
                             className: "badge badge-pill badge-info m-2",
                             style: {
                               fontSize: "24px",
-                              width: "50"
+                              width: "50px"
                             }
                           }),
                       "Items"
@@ -26,9 +26,9 @@ function Navbar$main(props) {
             });
 }
 
-var main = Navbar$main;
+var make = Navbar;
 
 export {
-  main ,
+  make ,
 }
 /* react/jsx-runtime Not a pure module */

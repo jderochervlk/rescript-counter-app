@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { main as NavBar } from "./components/navbar.bs";
+import { make as NavBar } from "./components/navbar.bs";
 import Counters from "./components/counters";
 
 class App extends Component {
