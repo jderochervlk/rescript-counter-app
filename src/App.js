@@ -2,8 +2,8 @@
 
 import * as Curry from "rescript/lib/es6/curry.js";
 import * as React from "react";
-import * as Navbar from "./components/navbar.bs.js";
-import * as Counters from "./components/counters.bs.js";
+import * as Navbar from "./components/navbar.js";
+import * as Counters from "./components/counters.js";
 import * as JsxRuntime from "react/jsx-runtime";
 
 function App(props) {
