@@ -1,4 +1,4 @@
-type counter = {value: int, id: int}
+type t = {value: int, id: int}
 
 @react.component
 let make = (~counter, ~onIncrement, ~onDecrement, ~onDelete) => {

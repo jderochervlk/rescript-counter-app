@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { make as NavBar } from "./components/navbar.bs";
-import Counters from "./components/counters";
+import { make as Counters } from "./components/counters.bs";
 
 class App extends Component {
   state = {
