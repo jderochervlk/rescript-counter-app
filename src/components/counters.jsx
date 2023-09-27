@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Counter from "./counter";
+import { make as Counter } from "./counter.bs";
 
 class Counters extends Component {
   render() {
